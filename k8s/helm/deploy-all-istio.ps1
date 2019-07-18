@@ -43,6 +43,8 @@ if ($clean -eq $true) {
     Write-Host "Previous releases deleted" -ForegroundColor Green
 }
 
+kubectl create namespace istio-system
+
 Write-Host "Generating Kiali Credentials" -ForegroundColor Green
 #generamos la credenciales para que kiali arranque sin problemas
 kubectl -n istio-system create secret generic kiali --from-literal=username=$kialiuser --from-literal=passphrase=$kialipasswrd

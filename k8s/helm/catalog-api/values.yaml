@@ -47,7 +47,7 @@ env:
 probes:
   liveness:
     path: /liveness
-    initialDelaySeconds: 10
+    initialDelaySeconds: 60
     periodSeconds: 15
     port: 80
   readiness:
@@ -57,3 +57,5 @@ probes:
     periodSeconds: 60
     port: 80
 
+ingress:
+  enabled: false
